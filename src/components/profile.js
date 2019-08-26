@@ -10,10 +10,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
 import { rhythm } from "../utils/typography"
-
-const Bio = () => {
+const Profile = () => {
   const data = useStaticQuery(graphql`
-    query BioQuery {
+    query ProfileQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
           fixed(width: 50, height: 50) {
@@ -50,11 +49,11 @@ const Bio = () => {
           borderRadius: `100%`,
         }}
         imgStyle={{
-          borderRadius: `50%`,
+          borderRadius: `100%`,
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in Philadelphia building useful things.
+        <strong>{author}</strong> author of <strong>The Serverless Blog</strong>, a serverless enthusiast and software developer who lives and works in Philadelphia building useful things.
         {` `}
         <a href={`https://twitter.com/${social.twitter}`}>
           You should follow him on Twitter
@@ -63,5 +62,8 @@ const Bio = () => {
     </div>
   )
 }
-export default Bio
+
+
+
+export default Profile
 

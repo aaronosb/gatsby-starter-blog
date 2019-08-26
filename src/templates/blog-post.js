@@ -13,7 +13,7 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -46,35 +46,35 @@ class BlogPostTemplate extends React.Component {
           />
           <footer>
             <Bio />
-          </footer>
+          </footer> 
         </article>
-
-        <nav>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
+ 
+         <nav>
+           <ul
+             style={{
+               display: `flex`,
+               flexWrap: `wrap`,
+               justifyContent: `space-between`,
+               listStyle: `none`,
+               padding: 0,
+             }}
+           >
+             <li>
+               {previous && (
+                 <Link to={previous.fields.slug} rel="prev">
+                   ← {previous.frontmatter.title}
+                 </Link>
+               )}
+             </li>
+             <li>
+               {next && (
+                 <Link to={next.fields.slug} rel="next">
+                   {next.frontmatter.title} →
+                 </Link>
+               )}
+             </li>
+           </ul>
+         </nav>
       </Layout>
     )
   }

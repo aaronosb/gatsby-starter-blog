@@ -46,6 +46,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -58,12 +59,12 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `The Serverless Blog`,
-        short_name: `GatsbyJS`,
+        short_name: `TheServerlessBlog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/lambda-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
